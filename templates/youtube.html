@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} Exercise {% endblock %} {% block
+content %}
+<h1>Exercises</h1>
+{% for video_id in video_ids %}
+<iframe
+  width="320"
+  height="180"
+  src="https://www.youtube.com/embed/{{video_id}}"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+{% endfor %} {% endblock %}

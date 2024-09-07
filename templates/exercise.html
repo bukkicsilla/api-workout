@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block title %} Exercise {% endblock %} {% block
+content %}
+<h1>Exercises: {{muscle}}</h1>
+<ul>
+  {% for name in names %}
+  <li><a href="/youtube/{{name}}">{{ name }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
