@@ -20,6 +20,7 @@ app.add_url_rule('/api/videos/<videoid>/<exercise_name>', view_func=workout.show
 #app.add_url_rule('/api/videos/<int:id>', methods=['PATCH'], view_func=workout.change_video_rating)
 
 #API endpoints
+app.add_url_rule('/api/workout/exercises/all', methods=['GET'], view_func=apiworkout.get_all_exercises)
 app.add_url_rule('/api/workout/exercises', methods=['GET'], view_func=apiworkout.get_exercises)
 app.add_url_rule('/api/workout/videos', methods=['GET'], view_func=apiworkout.get_videos)
 

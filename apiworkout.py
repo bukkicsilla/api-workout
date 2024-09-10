@@ -3,6 +3,11 @@ from models import db, Exercise, Video
 import constants
 import requests
 
+def get_all_exercises():
+    """List of all exercises."""
+    exercises = [exercise.serialize() for exercise in Exercise.query.all()]
+    return jsonify(exercises=exercises)
+
 def get_exercises():
     """List of all exercises."""
     muscle = request.args.get('muscle')
