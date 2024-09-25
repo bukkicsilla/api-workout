@@ -11,6 +11,7 @@ def get_all_exercises():
 def get_exercises():
     """List of all exercises."""
     muscle = request.args.get('muscle')
+    #print("muscle in api", muscle)
     if muscle and len(muscle) > 3:
         #exercises = [exercise.serialize() for exercise in Exercise.query.filter(Exercise.muscle == muscle).all()]
         musclelike = f"%{muscle}%"
