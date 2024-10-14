@@ -23,12 +23,14 @@ app.add_url_rule('/api/videos/<videoid>/<exercise_name>', view_func=workout.show
 app.add_url_rule('/api/workout/exercises/all', methods=['GET'], view_func=apiworkout.get_all_exercises)
 app.add_url_rule('/api/workout/exercises', methods=['GET'], view_func=apiworkout.get_exercises)
 app.add_url_rule('/api/workout/videos', methods=['GET'], view_func=apiworkout.get_videos)
+app.add_url_rule('/api/workout/videos/videoid', methods=['GET'], view_func=apiworkout.get_videos_by_videoid)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///workout"
+#app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///workout"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres.mnxinkwrhxbpsfyxelkk:AP1W0rk0ut69.@aws-0-us-west-1.pooler.supabase.com:5432/postgres"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ECHO"] = False
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 10
-app.config["SECRET_KEY"] = "Capstone projects are challenging."
+app.config["SECRET_KEY"] = "Capstone Workout API"
 
 connect_db(app)
 

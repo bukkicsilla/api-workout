@@ -29,3 +29,13 @@ def get_videos():
         return jsonify(videos=videos)
     videos = [video.serialize() for video in Video.query.all()]
     return jsonify(videos=videos)
+
+def get_videos_by_videoid():
+    """List of videos with a given videoid."""
+    videoid = request.args.get('videoid')
+    if videoid:
+        print("videoid in api", videoid)
+        videos = [video.serialize() for video in Video.query.filter(Video.videoid == videoid).all()]
+        return jsonify(videos=videos)
+    videos = [video.serialize() for video in Video.query.all()]
+    return jsonify(videos=videos)
