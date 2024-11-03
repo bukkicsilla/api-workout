@@ -1,7 +1,7 @@
 #API Workout
 
 
-[api-workour](https://flask-workout.onrender.com/) is a API  designed to save exercise vidoes with specified exersice names.
+[api-workout](https://flask-workout.onrender.com/) is a API  designed to save exercise vidoes with specified exersice names.
 
 
 
